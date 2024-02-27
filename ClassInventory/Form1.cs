@@ -73,6 +73,8 @@ namespace ClassInventory
             this.positionInput.Text = "";
             this.teamInput.Text = "";
 
+            this.label1.Text = $"Added {player.name}, id: {player.id}";
+
             playerList.Add(player);
         }
 
@@ -103,12 +105,12 @@ namespace ClassInventory
                 {
                     if (player.name == name)
                     {
-                        this.label1.Text = player.format();
-                        return;
+                        this.label1.Text += $"{player.format()}, Id: {player.id}\n";
                     }
                 }
             };
 
+            this.label1.Text = "";
             findPlayer(this.nameSearchInput.Text);
         }
 

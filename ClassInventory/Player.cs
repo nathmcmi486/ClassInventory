@@ -15,10 +15,12 @@ namespace ClassInventory
 
         public Player(string name, string team, string position, int age)
         {
+            Random random = new Random();
             this.name = name;
             this.team = team;
             this.position = position;
             this.age = age;
+            this.id = random.Next(1000, 10000);
         }
 
         public Player()
@@ -31,10 +33,13 @@ namespace ClassInventory
 
         public void setValues(string name, string team, string position, int age)
         {
+            Random random = new Random();
             this.name = name;
             this.team = team;
             this.position = position;
             this.age = age;
+
+            this.id = random.Next(1000, 10000);
         }
 
         public string format()
